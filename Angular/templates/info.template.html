@@ -1,0 +1,19 @@
+<h4>Your Information</h4>
+<div ng-controller="infoController">
+
+  <div class="panel panel-default" ng-repeat='item in items'>
+    <div class="panel-body">
+      <strong>Name: {{item.name}}</strong>
+    </div>
+    <div class="panel-body">
+      <strong>Last Name: {{item.lastName}}</strong>
+    </div>
+    <div class="panel-body">
+      <strong>Email: {{item.email}}</strong>
+    </div>
+    <div class="panel-footer"><strong>Password:{{item.password}}</strong></div>
+  </div>
+
+<h3><a ui-sref="signUp" ng-show='!loged'>Not a member,sign up now!</a></h3>
+</div>
+<br><br>

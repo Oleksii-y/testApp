@@ -1,0 +1,25 @@
+<h1>Breakfast Page</h1>
+<div ng-controller='breakfastController as ctrl'>
+  <div class="container">
+    <br>
+      <button class='btn btn-primary' ui-sref="home" style="border-radius:20px!important;background-color:#9e7225;">Back to menu</button>
+    </br><br>
+      <div class="row">
+          <div class="col-sm-6 col-md-4" ng-repeat="item in ctrl.breakfastItems">
+              <div class="thumbnail">
+                  <img ng-src="images/work/breakfast/{{item.src}}" alt="...">
+                  <div class="caption">
+                      <h3>{{item.name}}</h3>
+                      <p>{{item.description}}</p>
+                      <p>
+                        <a class="btn btn-primary" role="button" ng-click=ctrl.deleteBreakfastItem($index)>Delete</a>
+                        <a class="btn btn-default" role="button" ng-click=ctrl.showPriceBreakfastItem($index)>Show the Price</a>
+                       </p>
+                  </div>
+                  <h4 style="color:green;" ng-show='item.available'>{{item.price}}</h4>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<ui-view></ui-view>
