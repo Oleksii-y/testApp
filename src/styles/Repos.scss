@@ -1,0 +1,24 @@
+.repos {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  
+    & >div {
+      flex-wrap: wrap;
+      background-color: blue;
+      padding: 0 10px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .repo {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 40px;
+      padding: 10px;
+      color: #fff;
+    }
+  }
